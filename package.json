@@ -1,9 +1,9 @@
 {
 	"name": "vscode-dragonbones",
 	"displayName": "vscode-dragonbones",
-	"description": "preview dragonboens zip file",
+	"description": "vscode extension for preview dragonboens zip file",
 	"version": "0.1.0",
-	"publisher": "gonoijli",
+	"publisher": "gnoijli",
 	"engines": {
 		"vscode": "^1.56.0"
 	},
