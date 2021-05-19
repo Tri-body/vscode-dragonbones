@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "vsc-extension" extension will be documented in this file.
+### [0.1.0]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- fix load file error
 
-## [Unreleased]
+### [0.0.2]
 
-- Initial release
+- add html resource
+
+### [0.0.1]
+
+- Initial project

@@ -1,6 +1,6 @@
 {
-	"name": "vsce-dragonbones-preview",
-	"displayName": "dragonbones-preview",
+	"name": "vscode-dragonbones",
+	"displayName": "vscode-dragonbones",
 	"description": "preview dragonboens zip file",
 	"version": "0.1.0",
 	"publisher": "gonoijli",

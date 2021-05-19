@@ -29,3 +29,15 @@ function getExtensionFileVscodeResource(context: vscode.ExtensionContext, relati
   const diskPath = vscode.Uri.file(path.join(context.extensionPath, relativePath));
   return diskPath.with({ scheme: 'vscode-resource' }).toString();
 }
+
+/** 获取项目中资源的相对路径 */
+export function getRelativePath(uri: vscode.Uri) {
+  if (vscode.workspace.workspaceFolders) {
+    for (let w of vscode.workspace.workspaceFolders) {
+      if (uri.path.indexOf(w.uri.path) === 0) {
+        return path.relative(w.uri.path, uri.path)
+      }
+    }
+  }
+  return uri.path
+}
