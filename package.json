@@ -1,11 +1,11 @@
 {
-	"name": "vsc-extension",
-	"displayName": "vsc-extension",
-	"description": "",
-	"version": "0.0.2",
-	"publisher": "vsc-extension",
+	"name": "vsce-dragonbones-preview",
+	"displayName": "dragonbones-preview",
+	"description": "preview dragonboens zip file",
+	"version": "0.1.0",
+	"publisher": "gonoijli",
 	"engines": {
-		"vscode": "^1.50.0"
+		"vscode": "^1.56.0"
 	},
 	"categories": [
 		"Other"
@@ -19,7 +19,7 @@
 		"commands": [
 			{
 				"command": "vsc-extension.openDBPreview",
-				"title": "openDBPreview"
+				"title": "open dragonbones preview"
 			}
 		],
 		"languages": [
@@ -40,7 +40,7 @@
 				{
 					"command": "vsc-extension.openDBPreview",
 					"when": "resourceLangId == dbz",
-					"group": "navigation"
+					"group": "dbPreview@1"
 				}
 			]
 		}
@@ -54,18 +54,18 @@
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.50.0",
-		"@typescript-eslint/eslint-plugin": "^4.1.1",
-		"@typescript-eslint/parser": "^4.1.1",
-		"eslint": "^7.9.0",
-		"glob": "^7.1.6",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "^15.3.0",
+		"@types/vscode": "^1.56.0",
+		"@typescript-eslint/eslint-plugin": "^4.24.0",
+		"@typescript-eslint/parser": "^4.24.0",
+		"eslint": "^7.26.0",
+		"glob": "^7.1.7",
 		"mkdirp": "^1.0.4",
-		"mocha": "^8.1.3",
+		"mocha": "^8.4.0",
 		"rimraf": "^3.0.2",
-		"typescript": "^4.0.2",
-		"vsce": "^1.81.1",
-		"vscode-test": "^1.4.0"
+		"typescript": "^4.2.4",
+		"vsce": "^1.88.0",
+		"vscode-test": "^1.5.2"
 	}
 }

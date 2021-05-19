@@ -22,7 +22,6 @@ yarn-error.log*
 
 temp
 subapp
-.vscode
 .cache
 *.log
 test
