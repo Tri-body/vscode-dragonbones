@@ -1,9 +1,9 @@
 {
-	"name": "vscode-dragonbones",
-	"displayName": "vscode-dragonbones",
-	"description": "vscode extension for preview dragonboens zip file",
+	"name": "vscode-dragonbones-preview",
+	"displayName": "vscode-dragonbones-preview",
+	"description": "preview dragonboens zip file",
 	"icon": "icon.png",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"publisher": "gnoijli",
 	"engines": {
 		"vscode": "^1.56.0"
@@ -11,39 +11,71 @@
 	"categories": [
 		"Other"
 	],
-	"repository": {},
+	"repository": {
+		"url": "https://github.com/Tri-body/vscode-dragonbones"
+	},
 	"activationEvents": [
 		"onCommand:vsc-extension.openDBPreview"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "vsc-extension.openDBPreview",
-				"title": "open dragonbones preview"
-			}
-		],
-		"languages": [
-			{
-				"id": "dbz",
-				"aliases": [
-					"DBZ"
-				],
-				"extensions": [
-					".dbz",
-					".zip",
-					".bin"
-				]
-			}
-		],
-		"menus": {
-			"explorer/context": [
-				{
-					"command": "vsc-extension.openDBPreview",
-					"when": "resourceLangId == dbz",
-					"group": "dbPreview@1"
+		"configuration": [{
+			"title": "dragonbones preview config",
+			"properties": {
+				"dbv.conf.skeletonData": {
+					"type": "array",
+					"default": [
+						"*_ske.json",
+						"*_ske.dbbin",
+						"skeleton.json",
+						"skeleton.dbbin",
+						"skeleton.xml"
+					],
+					"description": "skeleton data file name in zip",
+					"scope": "window"
+				},
+				"dbv.conf.texture": {
+					"type": "array",
+					"default": [
+						"*_tex.png",
+						"texture.png"
+					],
+					"description": "texture file name in zip",
+					"scope": "window"
+				},
+				"dbv.conf.textureAtlas": {
+					"type": "array",
+					"default": [
+						"*_tex.json",
+						"texture.json",
+						"texture.xml"
+					],
+					"description": "texture atlas file name in zip",
+					"scope": "window"
 				}
+			}
+		}],
+		"commands": [{
+			"command": "vsc-extension.openDBPreview",
+			"title": "open dragonbones preview"
+		}],
+		"languages": [{
+			"id": "dbz",
+			"aliases": [
+				"DBZ"
+			],
+			"extensions": [
+				".dbz",
+				".zip",
+				".bin"
 			]
+		}],
+		"menus": {
+			"explorer/context": [{
+				"command": "vsc-extension.openDBPreview",
+				"when": "resourceLangId == dbz",
+				"group": "dbPreview@1"
+			}]
 		}
 	},
 	"scripts": {

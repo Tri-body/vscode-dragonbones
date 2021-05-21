@@ -1,3 +1,3 @@
-## vscode-dragonbones
+## vscode-dragonbones-preview
 
-vscode extension for preview dragonboens zip file
+preview dragonboens zip file

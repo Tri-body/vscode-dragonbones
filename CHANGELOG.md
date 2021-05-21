@@ -1,5 +1,9 @@
 # Change Log
 
+### [0.2.0]
+
+- add setting for files name
+
 ### [0.1.1]
 
 - add icon

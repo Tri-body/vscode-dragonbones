@@ -5,6 +5,10 @@ import * as fs from 'fs';
 export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('vsc-extension.openDBPreview', (uri: vscode.Uri) => {
+		const config = vscode.workspace.getConfiguration()
+		const skNames = config.get('dbv.conf.skeletonData')
+		const texNames = config.get('dbv.conf.texture')
+		const texaNames = config.get('dbv.conf.textureAtlas')
 		const panel = vscode.window.createWebviewPanel(
 			'DBPreview',
 			getRelativePath(uri),
@@ -22,7 +26,13 @@ export function activate(context: vscode.ExtensionContext) {
 				case 'preview_ready':
 					if (fs.existsSync(uri.path)) {
 						const content = fs.readFileSync(uri.path, { encoding: 'base64' })
-						panel.webview.postMessage({ type: 'open_file', content });
+						panel.webview.postMessage({
+							type: 'open_file',
+							content,
+							skNames,
+							texNames,
+							texaNames
+						});
 					}
 					break;
 				default:
