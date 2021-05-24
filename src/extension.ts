@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { getWebViewContent, getRelativePath } from './utils';
 import * as fs from 'fs';
+import * as path from 'path'
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -9,9 +10,10 @@ export function activate(context: vscode.ExtensionContext) {
 		const skNames = config.get('dbv.conf.skeletonData')
 		const texNames = config.get('dbv.conf.texture')
 		const texaNames = config.get('dbv.conf.textureAtlas')
+		const filename = path.basename(uri.path)
 		const panel = vscode.window.createWebviewPanel(
 			'DBPreview',
-			getRelativePath(uri),
+			filename,
 			vscode.ViewColumn.One,
 			{
 				enableScripts: true,
@@ -28,12 +30,15 @@ export function activate(context: vscode.ExtensionContext) {
 						const content = fs.readFileSync(uri.path, { encoding: 'base64' })
 						panel.webview.postMessage({
 							type: 'open_file',
+							filename,
 							content,
 							skNames,
 							texNames,
 							texaNames
 						});
 					}
+				case 'error_msg':
+					vscode.window.showErrorMessage(data.data)
 					break;
 				default:
 					break;

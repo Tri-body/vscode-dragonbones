@@ -1,5 +1,9 @@
 # Change Log
 
+### [0.3.0]
+
+- add error msg
+
 ### [0.2.0]
 
 - add setting for files name
