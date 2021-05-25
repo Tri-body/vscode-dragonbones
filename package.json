@@ -3,7 +3,7 @@
 	"displayName": "vscode-dragonbones-preview",
 	"description": "preview dragonboens zip file",
 	"icon": "icon.png",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"publisher": "gnoijli",
 	"engines": {
 		"vscode": "^1.56.0"

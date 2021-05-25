@@ -27,3 +27,4 @@ subapp
 test
 out
 package-lock.json
+dist

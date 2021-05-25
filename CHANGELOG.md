@@ -1,5 +1,9 @@
 # Change Log
 
+### [0.4.0]
+
+- update preview ui
+
 ### [0.3.0]
 
 - add error msg
