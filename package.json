@@ -12,7 +12,7 @@
 		"Other"
 	],
 	"repository": {
-		"url": "https://github.com/Tri-body/vscode-dragonbones"
+		"url": "https://github.com/Tri-body/vscode-dragonbones-preview"
 	},
 	"activationEvents": [
 		"onCommand:vsc-extension.openDBPreview"
